@@ -1,0 +1,142 @@
+body{
+  margin: 0;
+}
+
+#navbar{
+  position: fixed;
+  z-index: 1;
+  background-color: #020202;
+  width: 100%;
+  transition: 1s;
+}
+
+nav{
+  width:100%;
+  height:13.9%;
+}
+nav ul{
+  margin-top: 5.1vh;
+  margin-right: 5.2vw;
+  margin-bottom: 5.1vh;
+  margin-left: 5.2vw;
+}
+nav ul li{
+  padding-left: 2.6vw;
+  padding-right: 2.6vw;
+  font-family: 'Lato',sans-serif;
+  font-size: 1em;
+  color: #fff;
+  list-style: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul li.active a{
+  color: #286DA8;
+}
+nav ul li:hover{
+  color: #286DA8;
+}
+nav ul li a:hover{
+  color: #286DA8;
+}
+
+#photo{
+  width: 75%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+#signmain{
+  height: auto;
+  width:45vw;
+  display: block;
+  margin: auto;
+  padding-top: 10vh;
+}
+body div section p {
+  text-align: center;
+  font-family: 'Lato',sans-serif;
+  font-size: 3vw;
+  color: #b37d4e;
+  display: block;
+  margin: auto;
+}
+#social{
+  position: absolute;
+  top: 100%;
+  left:50%;
+  transform: translate(-50%,-100%);
+  margin: 0;
+}
+
+#social img{
+  width: 5vh;
+  height: auto;
+  display: inline-block;
+  margin-top: 5.1vh;
+  margin-right: 1.2vw;
+  margin-bottom: 5.1vh;
+  margin-left: 1.2vw;
+}
+
+@media only screen and (min-width:600px){
+
+  #photo{
+    height: 50vh;
+    width: auto;
+    display: block;
+    margin: auto;
+  }
+
+  #signmain{
+    height: 10vh;
+    width:auto;
+    display: block;
+    margin: auto;
+    padding-top: 0;
+  }
+
+  body div section p {
+    text-align: center;
+    font-family: 'Lato',sans-serif;
+    font-size: 3vw;
+    color: #b37d4e;
+    display: block;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  #signmain{
+    width: 41%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    background-color: transparent;
+      padding-top: 0;
+  }
+
+  #photo{
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: #020202;
+  }
+
+  body div section p {
+    position: absolute;
+    top: 65%;
+    left: 67.5%;
+    transform: translate(0%, -50%);
+  }
+}
