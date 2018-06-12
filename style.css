@@ -4,15 +4,16 @@ body{
 
 #navbar{
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   background-color: #020202;
   width: 100%;
   transition: 1s;
+  box-shadow: 0 0 2.3vh rgba(0,0,0,0.5);
 }
 
 nav{
   width:100%;
-  height:13.9%;
+  height:auto;
 }
 nav ul{
   margin-top: 5.1vh;
@@ -24,7 +25,8 @@ nav ul li{
   padding-left: 2.6vw;
   padding-right: 2.6vw;
   font-family: 'Lato',sans-serif;
-  font-size: 1em;
+  font-size: 0.625em;
+  font-weight: thin;
   color: #fff;
   list-style: none;
   display: inline-block;
@@ -37,15 +39,20 @@ nav ul li a{
 }
 
 nav ul li.active a{
-  color: #286DA8;
-}
-nav ul li:hover{
-  color: #286DA8;
-}
-nav ul li a:hover{
-  color: #286DA8;
+  color: #438496;
 }
 
+#sign{
+  width:12vw;
+  height: auto;
+  display: none;
+  min-width: 150px;
+  max-width: 220px;
+  max-height: 90px;
+  position: fixed;
+  top: 2.8%;
+  left: 2.6%;
+}
 #photo{
   width: 75%;
   height: auto;
@@ -63,7 +70,7 @@ body div section p {
   text-align: center;
   font-family: 'Lato',sans-serif;
   font-size: 3vw;
-  color: #b37d4e;
+  color: #438496;
   display: block;
   margin: auto;
 }
@@ -86,7 +93,14 @@ body div section p {
 }
 
 @media only screen and (min-width:600px){
-
+  nav ul li{
+    font-size: 1em;
+  }
+  #sign{
+    position: fixed;
+    top: 2%;
+    left: 2.6%;
+  }
   #photo{
     height: 50vh;
     width: auto;
@@ -106,13 +120,19 @@ body div section p {
     text-align: center;
     font-family: 'Lato',sans-serif;
     font-size: 3vw;
-    color: #b37d4e;
     display: block;
     margin: auto;
+  }
+
+  #sign{
+    display: inline-block;
   }
 }
 
 @media only screen and (min-width:768px) {
+  nav ul li{
+    font-size: 1em;
+  }
   #signmain{
     width: 41%;
     height: auto;
@@ -139,4 +159,84 @@ body div section p {
     left: 67.5%;
     transform: translate(0%, -50%);
   }
+
+  #sign{
+    display: inline-block;
+
+  }
+
+}
+/*css for home section end*/
+
+
+/*css for portfolio section start*/
+
+.category{
+  display: inline-flex;
+  justify-content: center;
+  position: absolute;
+  padding: 0;
+  top: 15%;
+  width: 100%;
+  height:auto;
+  font-family: 'Lato',sans-serif;
+  font-weight: 400;
+  list-style: none;
+}
+
+.category li{
+    font-size: 4vw;
+    transition: 0.5s ease-in-out;
+    padding-left: 3.2vw;
+    padding-right: 3.2vw;
+}
+
+.category li:nth-child(1){
+  color: #b37d4e;
+}
+.category li:nth-child(2){
+  color: #286da8;
+}
+.category li:nth-child(3){
+  color: #b37d4e;
+}
+
+.category li:hover{
+  transform: scale(1.5);
+}
+
+@media only screen and (min-width:600px){
+  .category li{
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width:768px){
+.category li{
+    font-size: 2vw;
+  }
+}
+
+
+.logo-container{
+  height: 60%;
+  width: 50%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,0%);
+  background-color: #286da8;
+  box-shadow: 0 0 2.3vw rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.i-container{
+  height: 60%;
+  width: 50%;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%,0%);
+  background-color:#CD5360;
+  box-shadow: 0 0 2.3vw rgba(0,0,0,0.5);
+  z-index: 0;
 }
