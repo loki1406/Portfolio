@@ -3,6 +3,7 @@ body{
 }
 
 #navbar{
+  height: auto;
   position: fixed;
   z-index: 10;
   background-color: #020202;
@@ -46,9 +47,10 @@ nav ul li.active a{
   width:12vw;
   height: auto;
   display: none;
-  min-width: 150px;
-  max-width: 220px;
-  max-height: 90px;
+  min-width: 100px;
+  min-height: auto;
+  max-width: auto;
+  max-height: 8vh;
   position: fixed;
   top: 2.8%;
   left: 2.6%;
@@ -93,6 +95,10 @@ body div section p {
 }
 
 @media only screen and (min-width:600px){
+  #navbar{
+
+      height: 9.4vh;
+  }
   nav ul li{
     font-size: 1em;
   }
@@ -130,6 +136,10 @@ body div section p {
 }
 
 @media only screen and (min-width:768px) {
+  #navbar{
+
+      height: 9.4vh;
+  }
   nav ul li{
     font-size: 1em;
   }
@@ -141,7 +151,7 @@ body div section p {
     left: 50%;
     transform: translate(0%, -50%);
     background-color: transparent;
-      padding-top: 0;
+    padding-top: 0;
   }
 
   #photo{
@@ -180,34 +190,38 @@ body div section p {
   width: 100%;
   height:auto;
   font-family: 'Lato',sans-serif;
-  font-weight: 400;
   list-style: none;
 }
 
 .category li{
     font-size: 4vw;
-    transition: 0.5s ease-in-out;
+    font-weight: 100;
+    transition: 1.5s ease-in-out;
     padding-left: 3.2vw;
     padding-right: 3.2vw;
 }
 
-.category li:nth-child(1){
+.category li a{
+  text-decoration: none;
+}
+.category li:nth-child(1) a{
   color: #b37d4e;
 }
-.category li:nth-child(2){
+.category li:nth-child(2) a{
   color: #286da8;
 }
-.category li:nth-child(3){
-  color: #b37d4e;
+.category li:nth-child(3) a{
+  color: #CD5360;
 }
 
-.category li:hover{
+.category .selected{
   transform: scale(1.5);
+  font-weight: 400;
 }
 
 @media only screen and (min-width:600px){
   .category li{
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
 }
 @media only screen and (min-width:768px){
@@ -216,27 +230,55 @@ body div section p {
   }
 }
 
+.carousel div{
+  transition: 1.5s ease-in-out;
+}
 
-.logo-container{
+.carousel div:nth-child(1){
+  background-color: #286da8;
+}
+.carousel div:nth-child(2){
+  background-color: #CD5360;
+}
+.carousel div:nth-child(3){
+  background-color: #b37d4e;
+}
+
+.slide1{
   height: 60%;
   width: 50%;
   position: absolute;
   top: 30%;
   left: 50%;
+  transform: scale(1);
   transform: translate(-50%,0%);
-  background-color: #286da8;
-  box-shadow: 0 0 2.3vw rgba(0,0,0,0.5);
-  z-index: 1;
+  box-shadow: 0 0 2.3vw rgba(0,0,0,0.25);
+  z-index: 2;
+  filter: opacity(1);
 }
 
-.i-container{
+.slide3{
   height: 60%;
   width: 50%;
   position: absolute;
   top: 30%;
-  left: 60%;
+  left: 5%;
   transform: translate(-50%,0%);
-  background-color:#CD5360;
-  box-shadow: 0 0 2.3vw rgba(0,0,0,0.5);
+  transform: scale(0.5);
+  box-shadow: 0 0 2.3vw rgba(0,0,0,0.25);
   z-index: 0;
+  filter: opacity(0.5);
+}
+
+.slide2{
+  height: 60%;
+  width: 50%;
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transform: translate(-50%,0%);
+  transform: scale(0.5);
+  box-shadow: 0 0 2.3vw rgba(0,0,0,0.25);
+  z-index: 1;
+  filter: opacity(0.5);
 }
