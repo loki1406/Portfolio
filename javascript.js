@@ -181,4 +181,34 @@ else {
 }
 
 
+var slider;
+slider = setInterval(imageslide, 3000);
+
+function imageslide(){
+  var arrayimages = ['golden-low-poly','cardiology','neurology','just-inked','kloud-vape','ortho','taste-the-trend'];
+  var image = arrayimages[Math.floor(Math.random()*arrayimages.length)];
+  var arrayselector = ['.twobytwo','.fourbythree','.twobythree','.threebythree','.onebytwo','.twobyone','.onebyone'];
+  var selection = arrayselector[Math.floor(Math.random()*arrayselector.length)];
+  console.log(arrayselector.length);
+  $(selection).css('background-image', 'url("logos/'+image+'.png")');
+}
+
+$('#logodesign section').on(
+  {
+    mouseenter : function(){
+      if (slider !== null) {
+      clearInterval(slider);
+      slider = null;
+
+    }
+  },
+    mouseleave : function(){
+      if(slider == null){
+        slider = setInterval(imageslide,3000)
+      }
+    }
+    }
+);
+
+
 });

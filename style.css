@@ -311,6 +311,7 @@ nav ul li.active a{
   box-shadow: 0 0 2.3vw rgba(0,0,0,0.25);
   z-index: 2;
   filter: opacity(1);
+  padding: 0.2vw;
 }
 
 .slide3{
@@ -324,6 +325,7 @@ nav ul li.active a{
   box-shadow: 0 0 2.3vw rgba(0,0,0,0.25);
   z-index: 0;
   filter: opacity(0.5);
+  padding: 0.1vw;
 }
 
 .slide2{
@@ -337,11 +339,181 @@ nav ul li.active a{
   box-shadow: 0 0 2.3vw rgba(0,0,0,0.25);
   z-index: 1;
   filter: opacity(0.5);
+  padding: 0vw;
 }
 
 @media all and (min-width:600px) and (orientation:portrait){
   .slide1{
     transform: scale(1.5);
     transform: translate(-50%,0%);
+  }
+}
+
+
+/*logo slide starts here*/
+
+#logodesign{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 0.2vw;
+  grid-template-rows: repeat(6, 1fr);
+}
+#logodesign section{
+    transition: 1s ease-in-out;
+}
+.twobytwo{
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #fff;
+  background-image:url('logos/just-inked.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.fourbythree{
+  grid-column: span 4;
+  grid-row: span 3;
+    background-color: #fff;
+  background-image:url('logos/taste-the-trend.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.twobythree{
+  grid-column: span 2;
+  grid-row:  span 3;
+    background-color: #fff;
+  background-image:url('logos/neurology.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.threebythree{
+  grid-column: span 3;
+  grid-row: span 3;
+    background-color: #fff;
+  background-image:url('logos/kloud-vape.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.onebytwo{
+  grid-column: span 1;
+  grid-row: span 2;
+    background-color: #fff;
+  background-image:url('logos/ortho.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.twobyone{
+  grid-column: span 2;
+  grid-row: span 1;
+  background-color: #fff;
+  background-image:url('logos/cardiology.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.onebyone{
+  grid-column: span 1;
+  grid-row: span 1;
+  background-color: #fff;
+  background-image:url('logos/golden-low-poly.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+
+@media all and (min-width:600px) (orientation: portrait){
+  #logodesign{
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.2vw;
+    grid-template-rows: repeat(7, 1fr);
+  }
+  .twobytwo{
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  .fourbythree{
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  .twobythree{
+    grid-column: span 4;
+    grid-row:  span 1;
+  }
+
+  .threebythree{
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  .onebytwo{
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  .twobyone{
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  .onebyone{
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+}
+
+@media all and (max-width:600px){
+  #logodesign{
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.2vw;
+    grid-template-rows: repeat(7, 1fr);
+  }
+  .twobytwo{
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  .fourbythree{
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  .twobythree{
+    grid-column: span 4;
+    grid-row:  span 1;
+  }
+
+  .threebythree{
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  .onebytwo{
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  .twobyone{
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  .onebyone{
+    grid-column: span 4;
+    grid-row: span 1;
   }
 }
